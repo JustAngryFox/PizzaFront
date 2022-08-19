@@ -4,16 +4,36 @@
 <span>{{dates.name}}</span>
 <span>{{dates.description}}</span>
 <span class="text-info">Цена: {{dates.price}} рублей</span>
-<span>Добавить в корзину</span>
+<span v-on:click="addToBasket">Добавить в корзину</span>
 </div>
 </template>
 
 
 
 <script>
+
+import store from './../store';
+
 export default {
 name: 'PizzaBlock',
-props: ['dates']
+props: ['dates','products'],
+
+data(){
+return {
+product:this.products,
+store:store
+}
+},
+
+methods:{
+addToBasket(){
+this.product.push([this.dates.name,this.dates.price])
+localStorage.setItem('product',JSON.stringify(this.product))
+this.store.count++
+console.log(this.store.count)
+}
+}
+
 }
 </script>
 

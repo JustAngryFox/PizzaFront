@@ -9,7 +9,10 @@ import {BootstrapVue, IconsPlugin} from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+
 Vue.use(VueRouter, BootstrapVue, IconsPlugin)
+
+Vue.prototype.$count=0
 
 const routes = [
   {
