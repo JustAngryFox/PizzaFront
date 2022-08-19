@@ -42,7 +42,7 @@ methods:{
 SendPizza(){
 var formData = new FormData(document.forms.PizzaForm)
 console.log(formData)
-axios.post('http://testpizzabackend/api/upload_product', formData, {
+axios.post('http://testpizzabackend/public/api/upload_product', formData, {
 headers: {
 'Content-Type': 'multipart/form-data'
 }
