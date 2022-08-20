@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import MainView from '../views/MainView.vue'
 import ProfileView from '../views/ProfileView.vue'
 import AddPizzaView from '../views/AddPizzaView.vue'
+import GetOrdersView from '../views/GetOrdersView.vue'
 
 import {BootstrapVue, IconsPlugin} from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -12,7 +13,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.use(VueRouter, BootstrapVue, IconsPlugin)
 
-Vue.prototype.$count=0
 
 const routes = [
   {
@@ -29,6 +29,11 @@ const routes = [
     path: '/add_pizza',
     name: 'add_pizza',
     component: AddPizzaView
+  },
+  {
+    path: '/get_orders',
+    name: 'orders',
+    component: GetOrdersView
   }
 ]
 

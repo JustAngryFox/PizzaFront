@@ -1,7 +1,7 @@
 <template>
 <div id="MainView" class="container flex-wrap align-items-start">
 
-<PizzaBlock v-bind:products.sync="products" v-for="dates in pizza"
+<PizzaBlock  v-for="dates in pizza"
   v-bind:key="dates.id"
   v-bind:dates="dates"></PizzaBlock>
   
@@ -11,7 +11,7 @@
 <script>
 
 import axios from 'axios'
-import PizzaBlock from './PizzaBlock.vue'
+import PizzaBlock from './MainView/PizzaBlock.vue'
 
 
 export default {
@@ -19,7 +19,6 @@ export default {
   
   data:()=>({
   pizza:[],
-  products:[],
   }),
   
 components: {
@@ -32,15 +31,12 @@ this.GetPizza()
 
 methods:{
 GetPizza(){
-localStorage.setItem('count_product',0)
 axios.get('http://testpizzabackend/public/api/get_products', {
 headers: {
 'Content-Type': 'multipart/form-data'
 }
 }).then(response => {
-console.log("response", response.data);
 this.pizza=response.data[0];
-console.log(this.pizza);
 })
 }
 }

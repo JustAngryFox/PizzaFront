@@ -12,25 +12,26 @@
 
 <script>
 
-import store from './../store';
+import store from '@/store';
 
 export default {
 name: 'PizzaBlock',
-props: ['dates','products'],
+props: ['dates'],
 
 data(){
 return {
-product:this.products,
-store:store
+store:store,
 }
 },
 
 methods:{
 addToBasket(){
-this.product.push([this.dates.name,this.dates.price])
-localStorage.setItem('product',JSON.stringify(this.product))
+this.store.products.pizza.push({name:this.dates.name,price:this.dates.price,image:this.dates.image,id:this.dates.id})
+
+localStorage.setItem('product',JSON.stringify(this.products))
+
+console.log(this.store.products.pizza)
 this.store.count++
-console.log(this.store.count)
 }
 }
 

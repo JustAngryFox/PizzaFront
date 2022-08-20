@@ -12,6 +12,7 @@
 <div class="container justify-content-start">
 <router-link class="navbar-brand" to="/">Главная</router-link>
 <router-link class="navbar-brand" to="/add_pizza">Добавить пиццу</router-link>
+<router-link class="navbar-brand" to="/get_orders">Посмотреть заказы</router-link>
 
 <div class="AppBlock0 align-middle">
 <router-link to="/profile"><span class="text-success">{{store.count}}</span><span class="text-white">Корзина</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart" viewBox="0 0 16 16">
@@ -43,6 +44,15 @@ export default {
 data:()=>({
 store:store
 })
+
+,
+
+mounted:function(){
+store.count=0;
+localStorage.setItem('product','')
+}
+
+
 }
 </script>
 
