@@ -81,7 +81,7 @@ this.SendPizza()
 
 SendPizza(){
 var formData = new FormData(document.forms.PizzaForm)
-axios.post('http://testpizzabackend/public/api/upload_product', formData, {
+axios.post('http://foxread.ru/pizza/public/api/upload_product', formData, {
 headers: {
 'Content-Type': 'multipart/form-data'
 }

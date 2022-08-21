@@ -1,6 +1,6 @@
 <template>
 <div id="GetProduct">
-<img :src="'http://testpizzabackend/storage/app/images/'+dates.image">
+<img :src="'http://foxread.ru/pizza/storage/app/images/'+dates.image">
 <span>{{dates.name}}</span>
 <span>Цена: {{dates.price}} рублей</span>
 </div>

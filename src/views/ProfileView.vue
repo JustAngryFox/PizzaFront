@@ -112,7 +112,7 @@ this.SendOrder()
 
 SendOrder(){
 var formData = new FormData(document.forms.OrderForm)
-axios.post('http://testpizzabackend/public/api/upload_order', formData, {
+axios.post('http://foxread.ru/pizza/public/api/upload_order', formData, {
 headers: {
 'Content-Type': 'multipart/form-data'
 }

@@ -45,13 +45,6 @@ data:()=>({
 store:store
 })
 
-,
-
-mounted:function(){
-store.count=0;
-localStorage.setItem('product','')
-}
-
 
 }
 </script>

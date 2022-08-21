@@ -27,7 +27,7 @@ products:[]
 }),
 
 mounted:function(){
-axios.get('http://testpizzabackend/public/api/get_product_orders?order_id='+this.dates.id, {
+axios.get('http://foxread.ru/pizza/public/api/get_product_orders?order_id='+this.dates.id, {
 headers: {
 'Content-Type': 'multipart/form-data'
 }

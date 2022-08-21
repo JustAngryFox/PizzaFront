@@ -27,7 +27,7 @@ GetOrder:GetOrder
 },
 
 mounted:function(){
-axios.get('http://testpizzabackend/public/api/get_orders', {
+axios.get('http://foxread.ru/pizza/public/api/get_orders', {
 headers: {
 'Content-Type': 'multipart/form-data'
 }

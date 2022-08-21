@@ -1,6 +1,6 @@
 <template>
 <div class="PizzaBlockProfile">
-<img :src="'http://testpizzabackend/storage/app/images/'+dates.image">
+<img :src="'http://foxread.ru/pizza/storage/app/images/'+dates.image">
 <span>{{dates.name}}</span>
 <span class="text-info">Цена: {{dates.price}} рублей</span>
 <button v-on:click="delete_product" class="btn btn-primary">Удалить</button>

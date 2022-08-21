@@ -31,7 +31,7 @@ this.GetPizza()
 
 methods:{
 GetPizza(){
-axios.get('http://testpizzabackend/public/api/get_products', {
+axios.get('http://foxread.ru/pizza/public/api/get_products', {
 headers: {
 'Content-Type': 'multipart/form-data'
 }

@@ -1,6 +1,6 @@
 <template>
 <div class="PizzaBlock flex-column">
-<img :src="'http://testpizzabackend/storage/app/images/'+dates.image">
+<img :src="'http://foxread.ru/pizza/storage/app/images/'+dates.image">
 <span>{{dates.name}}</span>
 <span>{{dates.description}}</span>
 <span class="text-info">Цена: {{dates.price}} рублей</span>
